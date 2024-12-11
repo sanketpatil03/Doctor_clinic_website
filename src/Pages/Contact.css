@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=DM+Serif+Display:ital@0;1&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lemon&family=Oswald:wght@600&family=Phudu:wght@300&family=Poppins&family=Protest+Riot&family=Protest+Strike&family=Russo+One&family=Satisfy&display=swap');
+.contactus_header{
+    & h1{
+        text-align: center;
+        font-size: 38px;
+        margin: 40px 0px 20px 0px;
+    }
+}
+.getintouch_details{
+    display: flex;
+    justify-content: space-around;
+    & h6{
+        font-size: 18px;
+        text-align: center;
+    }
+}
+.contactus_container{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0px;
+    & .map_container{
+        width: 35%;
+       
+    }
+}
+.map{
+    width: 100%;
+    height: 550px;
+}
+.contact_form_ctn{
+    background-color: rgb(195, 223, 255);
+    width: 35%;
+    padding: 25px;
+    & h3{
+        font-size: 26px;
+        margin: 10px 0px;
+
+    }
+    & p{
+        font-size: 18px;
+        margin: 10px 0px;
+    }
+    
+}
+
+.contact_form{
+    & input{
+        width: 100%;
+        height: 42px;
+        font-size: 17px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        margin-bottom: 18px;
+    }
+    & label{
+        font-size: 18px;
+    }
+    & textarea{
+        width: 100%;
+        height: 80px;
+    }
+    & button{
+        padding: 10px 30px;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        background-image:linear-gradient(to bottom ,rgb(103, 172, 246),rgb(9, 46, 160));
+        color: white;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 920px)
+{
+    .contactus_header{
+        & h1{
+            font-size: 32px;
+        }
+    }
+    .getintouch_details
+    {
+        & h6{
+            margin: 0px;
+            font-size: 16px;
+        }
+    }
+    .contactus_container
+    {
+        justify-content: space-around;
+        margin-top: 40px;
+        & .map_container{
+            width: 40%;
+        }
+        & .contact_form_ctn
+        {
+            width: 40%;
+        }
+    }
+}
+@media (max-width: 720px)
+{
+    .contactus_header{
+        & h1{
+            font-size: 30px;
+        }
+    }
+    .getintouch_details{
+        & h6{
+            font-size: 12px;
+        }
+    }
+    .contactus_container{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        & .contact_form_ctn{
+            width: 80%;
+        }
+        & .map_container{
+            width: 80%;
+
+        }
+    }
+    .map{
+        height: 300px;
+    }
+}
+@media (max-width: 550px)
+{
+    .contactus_header{
+        & h1{
+            font-size: 26px;
+        }
+    }
+    .getintouch_details{
+        justify-content: space-evenly;
+        gap: 10px;
+        flex-wrap: wrap;
+        & h6{
+            font-size: 12px;
+        }
+    }
+    .contact_form_ctn{
+        padding: 15px;
+        & h3{
+            font-size: 20px;
+        }
+        & p{
+            font-size: 16px;
+        }
+    }
+    .contact_form{
+        & label{
+            font-size: 16px;
+        }
+        & input{
+            height: 35px;
+            font-size: 14px;
+            padding: 12px;
+        }
+        & button{
+            font-size: 16px;
+            padding: 10px 25px;
+        }   
+    }
+}

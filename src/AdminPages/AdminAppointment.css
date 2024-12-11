@@ -1,0 +1,180 @@
+table{
+    width: 100%;
+   border-collapse: collapse;
+   z-index: 1;
+}
+thead{
+    background-color: rgb(12, 112, 218);
+    color: white;
+    border-radius: 10px;
+}
+th{
+    background-color: rgb(12, 112, 218);
+    padding: 15px 12px;
+    text-align: start;
+    font-size: 18px;
+   
+}
+.actions{
+    display: flex;
+    justify-content:space-around;
+    & .edit_icon{
+        background-color: #e0e7ff;
+        color: #4338ca;
+        font-size: 20px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+    & .delete_icon{
+        background-color: #fee2e2;
+        color: #b91c1c;
+        font-size: 20px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+tr{
+    background-color: white;
+    border-bottom: 1px solid #eef0f3;
+    
+}
+td{
+    padding: 10px 12px;
+}
+.appointment_edit_model{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.5s;
+}
+.appointment_edit_form{
+    position: relative;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    width: 60%;
+    border-radius: 4px;
+    & select{
+        outline: none;
+        padding: 10px;
+        border: 1.5px solid #eef0f3;
+    }
+    & h1{
+        color: rgb(12, 112, 218);
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+}
+.cancel_btn{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 22px;
+    background-color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.label_input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    & label{
+        font-size: 18px;
+       
+    }
+    & input{
+        border: 1.5px solid #eef0f3;
+        border-radius: 5px;
+        background-color: white;
+        padding: 10px;
+        color: black;
+        outline: none;
+        font-size: 15px;
+    }
+}
+.reason_label{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    & label{
+        font-size: 18px;
+       
+    }
+    & input{
+        border: 1.5px solid #eef0f3;
+        border-radius: 5px;
+        background-color: white;
+        padding: 10px;
+        color: black;
+        outline: none;
+        font-size: 15px;
+    }
+}
+.edit_appointment_form{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+#edit_appointment_btn{
+   grid-column-start: 1;
+   grid-column-end: 4;
+   background-color: rgb(12, 112, 218);
+   color: white;
+   border: none;
+   outline: none;
+   border-radius: 6px;
+   padding: 14px;
+   letter-spacing: 1.5px;
+   word-spacing: 3px;
+   font-size: 20px;
+   font-weight: 700;
+   font-family: serif;
+}
+.icon1{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    & input{
+        outline: none;
+        width: 400px;
+        padding: 6px 10px;
+        border: 1px solid #9ca3af;
+        border-radius: 6px;
+    }
+}
+#routes_link{
+    text-decoration: none;
+    color: black;
+}
+.filter{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#filter_btn{
+    background-color: #b91c1c;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 6px 18px;
+    border-radius: 4px;
+}

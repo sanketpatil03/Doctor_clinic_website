@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=DM+Serif+Display:ital@0;1&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lemon&family=Oswald:wght@600&family=Phudu:wght@300&family=Poppins&family=Protest+Riot&family=Protest+Strike&family=Russo+One&family=Satisfy&display=swap');
+
+.navbar_container{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0px 12px 12px rgba(0, 0, 0,0.2);
+    z-index: 10;
+    width: 100%;
+
+}
+.navbar_logo{
+    display: flex;
+    color:rgb(12, 112, 218);
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'PT Serif', serif;
+    font-weight: bolder;
+    font-size: 26px;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+.logo_image{
+    height: 65px;
+    width: 60px;
+}
+.navbar_links{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.nav_link{
+    text-decoration: none;
+    /* color: #555; */
+    font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+  font-size: 17px;
+  font-style: normal;
+}
+.navbar_authentications{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+#nav_btn1{
+    text-decoration: none;
+    color: rgb(12, 112, 218);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-size: 17px;
+    font-style: normal;
+}
+#nav_btn2{
+    text-decoration: none;
+    background-image: linear-gradient(to right ,rgb(54, 141, 233),rgb(9, 46, 160));
+    color: white;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 600;
+    font-size: 17px;
+    font-style: normal;
+    border: none;
+    outline: none;
+    text-align: center;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.hamburger_icons{
+    color: black;
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+}
+.responsive_navbar {
+ 
+    & ul{
+        position: absolute;
+        background-color: white;
+        z-index: 10;
+        width: max-content;
+        padding: 26px 35px;
+        list-style-type: none;
+       box-shadow: 2px 2px 14px rgba(0, 0, 0,0.3);
+        display: flex;
+        flex-direction: column;
+       justify-content: flex-start;
+       gap: 15px;
+      
+    }
+    & li{
+        width: 250px;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    & #links{
+        text-decoration: none;
+    }
+    
+}
+#mobile_nav_user{
+    height: 40px;
+}
+#profile_link{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+   
+}
+.footer_section{
+    width: 100%;
+    background-color:  rgb(232, 243, 255);
+    margin-top: 0px;
+}
+.footer_container{
+    padding: 25px 10px;
+    display: grid;
+    justify-content:space-evenly;
+    grid-template-columns: repeat(4,20%);
+    /* grid-template-columns: repeat(4,1fr); */
+}
+
+.footer_part1{
+    & #logo_image{
+        width: 45px;
+        height: 55px;
+    }
+    & .footer_logo{
+        display: flex;
+        align-items: center;
+        color:rgb(12, 112, 218);
+        font-family: 'Abril Fatface', cursive;
+        font-family: 'PT Serif', serif;
+        font-weight: bolder;
+        font-size: 12px;
+    }
+    & h2{
+        margin-top: 10px;
+        margin-bottom: 5px
+    }
+    & p{
+        margin: 4px 0px;
+    }
+}
+.footer_part2{
+    & ul{
+        list-style-type: none;
+        padding: 0px;
+    }
+    & .link_head{
+        font-family: 'Abril Fatface', cursive;
+        font-family: 'PT Serif', serif;
+        color: black;
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+    & li{
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+}
+.footer_part3{
+    & ul{
+        list-style-type: none;
+        padding: 0px;
+    }
+    & .link_head{
+        font-family: 'Abril Fatface', cursive;
+        font-family: 'PT Serif', serif;
+        color: black;
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+    & li{
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+}
+.footer_part4{
+    & ul{
+        list-style-type: none;
+        padding: 0px;
+    }
+    & .link_head{
+        font-family: 'Abril Fatface', cursive;
+        font-family: 'PT Serif', serif;
+        color: black;
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+    & li{
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+}
+@media (max-width: 1100px)
+{
+    .navbar_logo{
+        font-size: 22px;
+    }
+    .navbar_links{
+        gap: 30px;
+        & .nav_link{
+            font-size: 16px;
+        }
+    }
+    #nav_btn1{
+        font-size: 16px;
+    }
+    #nav_btn2{
+        font-size: 16px;
+    }
+}
+@media (max-width: 920px)
+{
+    .navbar_links{
+        display: none;
+    }
+    .navbar_authentications{
+        display: none;
+    }
+    .hamburger_icons{
+        display: block;
+    }
+    .responsive_navbar {
+        & ul{
+            gap: 16px;
+        }
+        & li{
+            font-size: 24px;
+        }
+    }
+    .footer_container{
+        grid-template-columns: repeat(2,45%);
+      gap: 30px;
+    }
+}
+@media (max-width: 500px)
+{
+    .navbar_logo{
+        font-size: 18px;
+    }
+    .hamburger_icons{
+        font-size: 26px;
+    }
+    .logo_image
+    {
+        width: 40px;
+        height: 45px;
+    }
+    .navbar_container{
+        padding: 10px 10px;
+    }
+    .responsive_navbar {
+        & ul{
+            gap: 16px;
+        }
+        & li{
+            width: 170px;
+            font-size: 20px;
+        }
+    }
+    .footer_container{
+        grid-template-columns: repeat(1,100%);
+        gap: 10px;
+    }
+    .footer_part1{
+        & .footer_logo{
+            font-size: 10px;
+        }
+        & p{
+          font-size: 12px; 
+        }
+    }
+    .footer_part2{
+        & .link_head{
+            font-size: 22px;
+        }
+        & li{
+            font-size: 16px;
+        }
+    }
+    .footer_part3{
+        & .link_head{
+            font-size: 22px;
+        }
+        & li{
+            font-size: 16px;
+        }
+    }
+    .footer_part4{
+        & .link_head{
+            font-size: 22px;
+        }
+        & li{
+            font-size: 16px;
+        }
+    }
+}

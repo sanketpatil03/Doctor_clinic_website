@@ -1,0 +1,115 @@
+.appointment_section{
+    background-image: url("/images/1113.jpg");
+    width: 100%;
+    background-size: cover;
+    padding: 50px 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+    & h1{
+        text-align: center;
+        color: white;
+       
+    }
+}
+
+.appointment_container{
+    height: max-content;
+    width: 70%;
+    padding: 35px 25px;
+    background-color: rgba(0,0,0,0.2);
+    margin: 30px auto;
+    & input{
+        width: 100%;
+        color: white;
+        margin: 10px 0px;
+        background-color: rgba(0,0,0,0.4);
+        outline: none;
+        border: none;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 2px;
+    }
+    & input::placeholder{
+        color: white;
+        opacity: 1;
+    }
+    & label{
+        color: white;
+       font-size: 20px;
+    }
+}
+.appointment_form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    & .booking_info{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    & #appointmentB_btn{
+        background-color: #6EC207;
+        color: white;
+        outline: none;
+        border: none;
+        width: 50%;
+        padding: 10px 0px;
+        font-size: 20px;
+    }
+}
+.date_time{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+     
+}
+.time{
+   display: flex;
+   gap: 20px;
+   & select{
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+   }
+}
+@media (max-width: 720px)
+{
+    .appointment_container{
+        width: 80%;
+    }
+    .appointment_form{
+      display: flex;
+      flex-direction: column;
+    }
+}
+@media (max-width: 650px)
+{
+    .date_time{
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
+    }
+    .time{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+@media (max-width: 450px)
+{
+    .appointment_section{
+        padding: 20px 0px;
+        & h1{
+            font-size: 24px;
+        }
+    }
+    .appointment_container{
+        & input{
+            font-size: 14px;
+            padding: 20px 12px;
+        }
+        & label{
+            font-size: 18px;
+        }
+    }
+}
