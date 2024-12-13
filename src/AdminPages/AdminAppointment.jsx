@@ -50,10 +50,7 @@ const AdminAppointment = () => {
         date : "",
         message : ""
     })
-    const handleFilter = (e)=>{
-        e.preventDefault();
-        
-    }
+
 
     const handleInput = (e) =>{
         const input =e.target;

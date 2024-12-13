@@ -12,7 +12,9 @@
 
 }
 .navbar_logo{
-    display: flex;
+    & .logo_text{
+        text-decoration: none;
+        display: flex;
     color:rgb(12, 112, 218);
     font-family: 'Abril Fatface', cursive;
     font-family: 'PT Serif', serif;
@@ -21,6 +23,8 @@
     gap: 10px;
     align-items: center;
     text-align: center;
+    }
+    
 }
 .logo_image{
     height: 65px;
@@ -30,10 +34,12 @@
     display: flex;
     align-items: center;
     gap: 50px;
+
 }
 .nav_link{
     text-decoration: none;
-    /* color: #555; */
+
+    color: rgb(12, 112, 218);
     font-family: "Libre Baskerville", serif;
   font-weight: 600;
   font-size: 17px;
@@ -77,6 +83,7 @@
  
     & ul{
         position: absolute;
+        right: 0;
         background-color: white;
         z-index: 10;
         width: max-content;
@@ -98,6 +105,7 @@
     }
     & #links{
         text-decoration: none;
+        color: rgb(12, 112, 218);
     }
     
 }
@@ -205,7 +213,10 @@
 @media (max-width: 1100px)
 {
     .navbar_logo{
-        font-size: 22px;
+        & .logo_text{
+            font-size: 22px;
+        }
+      
     }
     .navbar_links{
         gap: 30px;
@@ -247,7 +258,10 @@
 @media (max-width: 500px)
 {
     .navbar_logo{
-        font-size: 18px;
+        & .logo_text{
+            font-size: 18px;
+        }   
+        
     }
     .hamburger_icons{
         font-size: 26px;

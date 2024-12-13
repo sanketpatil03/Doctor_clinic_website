@@ -11,10 +11,11 @@ import "./UserLayout.css";
  import { getAuth,  onAuthStateChanged, signOut} from "firebase/auth";
  import app from "../util/firebase-config";
 import { useEffect, useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useLocation } from "react-router-dom";
 const auth = getAuth(app);
 const UserLayout = ({children}) => {
     const navigate = useNavigate();
+    const location = useLocation();
     const divRef= useRef(null);
     const hamRef = useRef(null);
     const[navbar,setNavbar] = useState(false);
@@ -41,14 +42,24 @@ const UserLayout = ({children}) => {
             <nav className="navbar_section">
                 <div className="navbar_container">
                     <div className="navbar_logo">
-                        <img src="/images/logo.png" alt="" className="logo_image" />
+                     <Link to="/" className="logo_text">
+                       <img src="/images/logo.png" alt="" className="logo_image" />
                         <span>FAMILYCARE</span>
+                    </Link>
                     </div>
                     <div className="navbar_links">
-                        <Link to="/" className="nav_link">Home</Link>
-                        <Link to="/services" className="nav_link">Services</Link>
-                        <Link to="/contact"  className="nav_link">Contact Us</Link>
-                        <Link to="/appointment" className="nav_link">Appointment</Link>
+                        <Link to="/" className="nav_link" style={{
+                              color:   location.pathname == "/" &&  "black"
+                        }}>Home</Link>
+                        <Link to="/services" className="nav_link" style={{
+                              color:   location.pathname == "/services" &&  "black"
+                        }}>Services</Link>
+                        <Link to="/contact"  className="nav_link" style={{
+                              color:   location.pathname == "/contact" &&  "black"
+                        }}>Contact Us</Link>
+                        <Link to="/appointment" className="nav_link" style={{
+                              color:   location.pathname == "/appointment" &&  "black"
+                        }}>Appointment</Link>
                         {/* <Link 
                         // className={({isActive})=>`${isActive ? "blue" : "black"}`}
                         to="/">Home</Link> */}
@@ -88,25 +99,33 @@ const UserLayout = ({children}) => {
                     { session && <Link id="profile_link" to="/profile"> <img src="/images/user.png" alt="" id="mobile_nav_user"/>  <p>{session.displayName}</p></Link>}
 
                    <li>
-                        <Link id="links" to="/"> Home</Link> 
+                        <Link id="links" to="/" style={{
+                              color:   location.pathname == "/" &&  "black"
+                        }}> Home</Link> 
                         <hr/>
                     </li> 
                     <li>
-                        <Link id="links" to="/services">Services</Link>
+                        <Link id="links" to="/services" style={{
+                              color:   location.pathname == "/services" &&  "black"
+                        }}>Services</Link>
                         <hr/>
                     </li>
                     <li>
-                        <Link id="links" to="/contact">ContactUs</Link>
+                        <Link id="links" to="/contact" style={{
+                              color:   location.pathname == "/contact" &&  "black"
+                        }}>ContactUs</Link>
                         <hr/>
                     </li>
                     <li>
-                        <Link id="links" to="/appointment">Appointment</Link>
+                        <Link id="links" to="/appointment" style={{
+                              color:   location.pathname == "/appointment" &&  "black"
+                        }}>Appointment</Link>
                         <hr/>
                     </li>
                    
                     {
-                        session ? <li> <Link id="links" to="/" onClick={handleLogout}>Logout</Link> <hr/> </li>  : <>  <li><Link id="links" to="/login">Login</Link> <hr/></li>
-                                                                                                <                       li><Link id="links" to="/signup">Sign Up</Link><hr/> </li></>
+                        session ? <li> <Link id="links" to="/" onClick={handleLogout}>Logout</Link> <hr/> </li>  : <>  <li><Link id="links" to="/login" style={{ color : location.pathname=="/login" && "black"}}>Login</Link> <hr/></li>
+                                                                                                <                       li><Link id="links" to="/signup" style={{ color : location.pathname=="/signup" && "black"}}>Sign Up</Link><hr/> </li></>
                                      
                                 
                     }

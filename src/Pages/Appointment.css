@@ -76,7 +76,7 @@
 @media (max-width: 720px)
 {
     .appointment_container{
-        width: 80%;
+        width: 90%;
     }
     .appointment_form{
       display: flex;
@@ -93,6 +93,11 @@
     .time{
         flex-direction: column;
         gap: 10px;
+    }
+    .date{
+        & input{
+            width: 100%;
+        }
     }
 }
 @media (max-width: 450px)

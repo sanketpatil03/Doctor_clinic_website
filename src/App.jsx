@@ -20,8 +20,8 @@ function App() {
               <Route path="/services" element={<Services/>} />
               <Route path="/contact" element={<Contact/>} />
               <Route path="/appointment" element={<Appointment/>} />
-              <Route path="/login" element={<Login/>} />
-              <Route path="/signup" element={<SignUp/>} />
+                <Route path="/login" element={<Login/>} />
+                <Route path="/signup" element={<SignUp/>} />
               <Route path="/profile" element={<Profile/>} />
               <Route element={<AdminGuard />}>
                     <Route path="/admin/appointment" element={<AdminAppointment/>}></Route>

@@ -15,23 +15,20 @@ const LoginGuard = () => {
             {
                 setSession(user);
             }
-            else{
-                return <Outlet />
-            }
+            
         })
     },[])
-    if(session)
-    {
-        navigate("/");
-       
-    }
-    else{
+   if(session)
+   {
+    return(
+        navigate("/")
+      
+    )
+   }
         return (
-            <div>
-                <h1>Hello</h1>
-            </div>
+            <Outlet/>
         )
-    }
+    
     
 }
 
